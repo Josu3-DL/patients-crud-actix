@@ -804,6 +804,7 @@ name = "paciente-api"
 version = "0.1.0"
 dependencies = [
  "actix-web",
+ "derive_more",
  "serde",
  "serde_json",
  "uuid",

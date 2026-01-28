@@ -2,6 +2,7 @@ mod models;
 mod handlers;
 mod routes;
 mod state;
+mod errors;
 
 use actix_web::{App, HttpServer, web};
 use state::AppState;

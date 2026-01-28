@@ -4,14 +4,14 @@ use uuid::Uuid;
 #[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct Paciente {
     pub id: Uuid,
-    pub name: String,
+    pub nombre: String,
     pub edad: u8,
     pub email: String
 }
 
 #[derive(Debug, Deserialize)]
 pub struct CrearPaciente {
-    pub name: String,
+    pub nombre: String,
     pub edad: u8,
     pub email: String
 }

@@ -12,7 +12,7 @@ pub async fn crear_paciente(
 
     let paciente = Paciente {
         id: Uuid::new_v4(),
-        name: body.name.clone(),
+        nombre: body.nombre.clone(),
         edad: body.edad,
         email: body.email.clone()
     };
@@ -27,10 +27,10 @@ pub async fn actualizar_paciente(
     body: web::Json<CrearPaciente>
 ) -> impl Responder {
     let mut pacientes = data.pacientes.lock().unwrap();
-
+    
     match pacientes.iter_mut().find(|paciente| paciente.id == * paciente_id) {
         Some(paciente) => {
-            paciente.name = body.name.clone();
+            paciente.nombre = body.nombre.clone();
             paciente.edad = body.edad;
             paciente.email = body.email.clone();
             HttpResponse::Ok().json(paciente)

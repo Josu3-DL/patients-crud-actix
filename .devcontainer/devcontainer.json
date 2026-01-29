@@ -1,0 +1,19 @@
+{
+  "name": "patients-crud-actix",
+  "image": "mcr.microsoft.com/devcontainers/rust:1-78",
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "rust-lang.rust-analyzer",
+        "vadimcn.vscode-lldb",
+        "ms-azuretools.vscode-docker",
+        "PKief.material-icon-theme"
+      ]
+    }
+  },
+  "forwardPorts": [8080],
+  "postCreateCommand": "cargo build"
+}

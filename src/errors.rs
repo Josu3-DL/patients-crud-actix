@@ -26,5 +26,5 @@ impl ResponseError for ApiError {
                 HttpResponse::InternalServerError().json(self.to_string())
             }
         }
-    }  
+    }
 }
